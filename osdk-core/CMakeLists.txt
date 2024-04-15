@@ -3,13 +3,6 @@ project(djiosdk-core)
 
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "i386|i686|x86|AMD64|x86_64")
   set(ARCH x86)
-  include_directories(${CMAKE_CURRENT_SOURCE_DIR}/osdk-core/linker/${ARCH}/inc)
-  link_directories(${CMAKE_CURRENT_SOURCE_DIR}/osdk-core/linker/${ARCH}/lib)
-  link_libraries(dji-linker)
-endif()
-
-if(CMAKE_SYSTEM_PROCESSOR MATCHES "i386|i686|x86|AMD64|x86_64")
-  set(ARCH x86)
 
 elseif((CMAKE_SYSTEM_PROCESSOR MATCHES "^arm*") OR (CMAKE_SYSTEM_PROCESSOR MATCHES "^aarch"))
   if(CMAKE_SIZEOF_VOID_P EQUAL 4)
